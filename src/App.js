@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Todos from "./Todos"
+import { ToDoProvider } from "./todo-context2"
+import { ViewProvider } from "./view-context";
+import "./styles.scss"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ToDoProvider>
+      <ViewProvider>
+        <div className="App">
+          <h1 className="Header">To Do App</h1>
+          <Todos />
+        </div>
+      </ViewProvider>
+    </ToDoProvider>
+
   );
 }
 
