@@ -4,10 +4,17 @@ import { v4 as uuidv4 } from 'uuid';
 
 const defaultValue = [{
     id: uuidv4(),
-    task: "clean",
+    task: "Clean house",
     completed: false,
     highPriority: false,
     view: 'today'
+},
+{
+    id: uuidv4(),
+    task: "Walk dog",
+    completed: false,
+    highPriority: false,
+    view: 'tomorrow'
 }]
 
 export const ToDoContext = createContext()
